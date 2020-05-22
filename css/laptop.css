@@ -1,0 +1,244 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOJA DE ESTILO DEL PORTÁTIL */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor del portátil*/
+#laptop {
+  opacity: 1;
+}
+
+/*Borde exterior del portátil*/
+#laptop-outer-border {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 70%;
+  max-width: 1200px;
+  background: rgba(120,120,120, 1.0);
+  border-top-left-radius: 3% 5%;
+  border-top-right-radius: 3% 5%;
+  border-bottom-left-radius: 0.3% 1%;
+  border-bottom-right-radius: 0.3% 1%;
+  padding-top: .1%;
+  padding-left: .1%;
+  padding-right: .1%;
+  padding-bottom: 0px;
+  transition: .5s;
+}
+
+/*Borde interior del portátil*/
+#laptop-inner-border {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  width: 100%;
+  max-width: 1500px;
+  background: rgba(24,24,24, 1.0);
+  border-top-left-radius: 3% 5%;
+  border-top-right-radius: 3% 5%;
+  border-bottom-left-radius: 0.3% 1%;
+  border-bottom-right-radius: 0.3% 1%;
+  padding: .2%;
+  padding-bottom: 0;
+  box-shadow: 0 0 1vw .5vw rgba(0, 0, 0, .06);
+}
+
+/*Cámara del portátil*/
+#camera {
+  position: absolute;
+  width: .8vw;
+  max-width: 13.7px;
+  height: .8vw;
+  max-height: 13.7px;
+  background-color: rgba(6,6,6,1);
+  z-index: 600;
+  margin-top: 1.5vw;
+  border-radius: 5vw;
+  border: .1vw solid rgba(20,20,20,1);
+}
+
+/*Borde más grueso del portátil*/
+#laptop-border {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  width: 100%;
+  max-width: 1500px;
+  background: rgba(14,14,14, 1.0);
+  border-top-left-radius: 3% 5%;
+  border-top-right-radius: 3% 5%;
+  border-bottom-left-radius: 0.3% 1%;
+  border-bottom-right-radius: 0.3% 1%;
+  padding: 2.55%;
+  padding-top: 4.5%;
+  padding-bottom: 3.6%;
+  overflow: hidden;
+}
+
+/*Fondo de la app temporal mientras se carga la imagen final*/
+#app_pre {
+  position: absolute;
+  width: 94.9%;
+  background-color: rgba(48,48,48,1.0);
+  padding-top: 53%;
+  border-radius: .15vw;
+  display: flex;
+  flex-direction: row;
+}
+  /*Parte de la izquierda*/
+  #app_left {
+    position: absolute;
+    background-color: rgba(36,36,36,1.0);
+    width: 28.2%;
+    height: 100%;
+    margin-top: -55.871%;
+    border-radius: .15vw 0 0 .15vw;
+  }
+  /*Franja oscura entre secciones*/
+  #app_right {
+    position: absolute;
+    background-color: rgba(30,30,30,1.0);
+    width: .35%;
+    left: 28.1%;
+    height: 100%;
+    margin-top: -55.871%;
+    border-radius: .15vw 0 0 .15vw;
+  }
+
+/*Imagen de la app*/
+#app {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 100%;
+  background-image: url('../assets/images/app_2_2048.jpg');
+  background-size: 130%;
+  background-repeat: no-repeat;
+  padding-top: 56%;
+  border-radius: .15vw;
+  overflow: hidden;
+}
+
+/*Brillo en la pantalla*/
+/*#laptop-border:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -15%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,.09), rgba(255,255,255,0));
+  transition: .45s;
+  transform: skewX(25deg);
+  z-index: 2000;
+}*/
+
+/*Cover de la app al pasar el mouse por encima*/
+/*#app:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .05s;
+}
+#app:hover:before {
+  background-color: rgba(255,255,255,.03);
+}*/
+
+/*Parte inferior del portátil, sección de arriba*/
+.screen_bottom {
+  background: rgba(30,30,30, 1.0);
+  width: 80%;
+  max-width: 1360px;
+  height: 1.65vw;
+  max-height: 28px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  /*Detalle central del cuerpo del portátil*/
+  #box {
+    position: absolute;
+    width: 10vw;
+    max-width: 170px;
+    height: .9vw;
+    max-height: 15.3px;
+    background: rgba(20,20,20, 1.0);
+    border-radius: 0 0 10px 10px;
+  }
+
+/*Parte inferior del portátil, sección de abajo*/
+.screen_bottom_2 {
+  background: rgba(15,15,15, 1.0);
+  width: 80%;
+  max-width: 1360px;
+  height: 1vw;
+  max-height: 17px;
+  margin: auto;
+  border-bottom-left-radius: 7% 100%;
+  border-bottom-right-radius: 7% 100%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*MEDIA QUERIES*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 1740px) {
+  #app {
+    border-radius: 2px;
+  }
+  #laptop-outer-border {
+    padding: 2.4px;
+    padding-bottom: 0;
+  }
+  #camera {
+    margin-top: 26.6px;
+    border: 1.61px solid rgba(20,20,20,1);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #laptop-outer-border {
+    width: 826px;
+  }
+  .screen_bottom {
+    width: 946.4px;
+    height: 19.8px;
+  }
+    #box {
+      width: 120px;
+      height: 10.8px;
+    }
+  .screen_bottom_2 {
+    width: 946.4px;
+    height: 12px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  #laptop-outer-border {
+    width: 70%;
+  }
+  .screen_bottom {
+    width: 80%;
+    height: 1.65vw;
+  }
+    /*Detalle central del cuerpo del portátil*/
+    #box {
+      width: 10vw;
+      height: .9vw;
+    }
+
+  /*Parte inferior del portátil, sección de abajo*/
+  .screen_bottom_2 {
+    width: 80%;
+    height: 1vw;
+  }
+}

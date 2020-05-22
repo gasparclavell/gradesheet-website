@@ -1,0 +1,643 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOJA DE ESTILO DE LAS TARJETAS */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor principal de las tarjetas*/
+.main-container {
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: serif;
+  font-weight: 300;
+}
+
+.main-subcontainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#main-subcontainer_1 {
+  position: relative;
+  transform: translate(-25em, 0);
+}
+#main-subcontainer_2 {
+  transform: translate(25em, 0);
+}
+
+#main-subcontainer_key {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*Capa que se ubica encima de la imagen de fondo*/
+.touchable-background {
+  background-image: url('../assets/images/background_2.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;  
+  z-index: 100;
+}
+
+.touchable-background:after {
+  background-color: red;
+  width: 100%;
+  height: 500px;
+}
+
+/*Envoltorio Flexbox*/
+#wrapper {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding-top: 6.81em;
+  padding-bottom: 5em;
+}
+
+/*Texto explicativo de la izquierda*/
+.side-text {
+  padding-right: 1.8125em;
+  width: 21.875em;
+  height: 100%;
+  text-align: right;
+  color: white;
+  padding-top: 0.7218em;
+}
+
+/*Título*/
+.side-text-title {
+  font-size: 2em;
+}
+
+/*Texto*/
+.side-text-body {
+  font-size: 1em;
+  opacity: .6;
+  line-height: 1.55em;  
+}
+
+/*Contenedor de las tarjetas*/
+.payment-card-container {
+  padding: 0 23px 0 23px;
+}
+
+/*Tarjeta*/
+.payment-card {
+  background-color: rgba(255,255,255,1);
+  width: 26.56em;
+  padding-bottom: 2.625em;
+  padding-top: 1.5em;
+  border-radius: .1em;
+  box-shadow: 0 0 0.625em 0.375em rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 101;
+}
+
+/*Botón de arriba a la derecha para cerrar*/
+.close-icon {
+  position: absolute;
+  background-color: red;
+  right: 0.41em;
+  top: 0.66em;
+  height: 0;
+  transform: rotate(45deg);
+  font-size: 2.25em;
+  color: rgba(0,0,0,0.14);
+}
+  .close-icon p {
+    cursor: pointer;
+    transition: .1s;
+  }
+  .close-icon p:hover {
+    cursor: pointer;
+    color: rgba(0,0,0,0.5);
+  }
+.close-icon p:active {
+    transform: scale(.8);
+}
+
+/*Cuerpo de la tarjeta*/
+.payment-card-subcontainer {
+  width: 80%;
+  height: 90%;
+}
+
+/*Contenedor del iono de la tarjeta*/
+.payment-card-icon-container {
+  position: relative;
+  width: 100%;
+}
+
+/*Icono de la tarjeta*/
+.payment-card-icon {
+  width: 9.6em;
+  height: 8.125em;
+  margin-top: .2em;
+  background-image: url('../assets/images/payment.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .1;
+  transition: .2s;
+}
+.recover-icon {
+  width: 8.125em;
+  height: 8.125em;
+  background-image: url('../assets/images/recover.png');
+  background-size: 90% 90%;
+  opacity: .4;
+}
+
+/*Contenedor del campo de texto*/
+.field-container {
+  position: relative;
+  margin-top: -1em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+/*Placeholder personlaizado de los campos de texto*/
+.placeholder {
+  transform: translate(4.6em, 3.58em);
+  pointer-events: none;
+  opacity: .5;
+  transition: .26s !important;
+  font-size: 0.8125em;
+}
+.placeholder_up {
+  transform: translate(1.4em, .7em);
+  opacity: .8;
+}
+.placeholder_up_dark {
+  transform: translate(1.4em, .7em);
+  opacity: .95;
+}
+
+/*Icono del campo de texto*/
+.field-icon {
+  margin-left: 1em;
+  margin-top: .68em;
+  font-size: 1.3em !important;
+  position: absolute;
+  opacity: .2;
+  color: black;
+  z-index: 200;
+}
+.field-icon_up {
+  opacity: .8;
+}
+
+/*Campo de texto*/
+.email-input {
+  position: relative;
+  width: 100%;
+  outline: none;
+  height: 4em;
+  border-color: transparent;
+  padding-left: 4.6em;
+  padding-right: 2.23em;
+  margin-bottom: .5em;
+  font-size: 0.8125em;
+  transition: .2s;
+
+  background-color: transparent;
+  border: 0 solid rgba(0,0,0,.4);
+  border-bottom: 2px solid rgba(0,0,0,.15);
+
+  font-weight: 400;
+}
+::placeholder {
+  text-align: center;
+  padding-right: 3.6em;
+  opacity: .5;
+}
+
+.email-input:focus {
+  border-bottom: 2px solid rgba(0,0,0,.7);
+}
+
+/*Change autocomplete styles in WebKit*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  /*border: 1px solid green;*/
+  /*-webkit-text-fill-color: green;*/
+  /*-webkit-box-shadow: 0 0 0px 1000px #000 inset;*/
+  /*transition: background-color 5000s ease-in-out 0s;*/
+  border-bottom: 2px solid rgba(0,0,0,.7);
+}
+
+/*Botón*/
+.payment-card-subcontainer .submit {
+  position: relative;
+  width: 100%;
+  outline: none;
+  height: 3.6em;
+  border: 0px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  cursor: default;
+  color: white;
+  font-size: 0.85em;
+  transition: .2s;
+  font-weight: 500;
+}
+.button-shiny {
+  background-color: rgb(224, 154, 46) !important;
+  cursor: pointer !important;
+  overflow: hidden;
+}
+  /*Efecto de brillo de los botones dorados*/
+  .button-shiny:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+    transition: .45s;
+    transform: skewX(-15deg);
+  }
+  .button-shiny:hover:before {
+    left: 105%;
+  }
+
+.button-blue {
+  background-color: rgb(32, 202, 229) !important;
+  cursor: pointer !important;
+  overflow: hidden;
+}
+  .button-blue:hover {
+    background-color: rgb(45, 215, 240) !important;
+  }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Clase para indicar que se ha introducido un valor correcto*/
+.success {
+  background-color: rgba(0,255,0,0.04);
+  border-bottom: 2px solid rgba(80,200,80,1);
+  padding-bottom: 0;
+}
+.success:focus,
+.success:hover {
+  border-bottom: 2px solid rgba(80,200,80,1);
+}
+/*En caso de que introduzcamos un valor incorrecto en un campo de texto*/
+input.error {
+  background-color: rgba(255,0,0,0.05);
+  border-bottom: 2px solid rgba(255,127,127);
+}
+input.error:focus,
+input.error:hover {
+  border-bottom: 2px solid rgba(255,127,127);
+}
+/*Mensajes de error de Validate.js*/
+label.error {
+  color: rgba(255, 80, 80);
+  transform: translate(4.6em, 3.3em);
+  font-size: 0.8125em;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor del icono de carga*/
+.loading-container {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+  /*Icono de carga*/
+  .loading {
+    position: absolute;
+    background-image: url('../assets/images/loading.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 15.625em;
+    height: 15.625em;
+  }
+
+/*Mensaje de confirmación*/
+.confirmation-message {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  padding-top: 1em;
+}
+  #tick {
+    position: relative;
+    top: -0.025em;
+    font-size: 10.8125em;
+  }
+  .email-text {
+    margin-top: 0.135em;
+  }
+  .sent-text {
+    margin-top: -0.8125em;
+  }
+
+/*Subtítulo para acceder a la otra tarjeta*/
+.payment-card-subtitle {
+  font-size: 0.722em;
+  color: white;
+  margin-top: 2.51em;
+  display: flex;
+  flex-direction: row;
+}
+  .payment-card-subtitle #s1 {
+    opacity: .5;
+    padding-right: 0.5em;
+  }
+  .payment-card-subtitle a {
+    color: white;
+    opacity: .62; 
+    position: relative;
+    z-index: 102;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .payment-card-subtitle a:hover {
+    opacity: .84; 
+  }
+
+/*Texto explicativo derecho*/
+#side-text_right {
+  text-align: center;
+  padding-left: 1.81em;
+}
+
+/*Arreglo en los iconos de la librería Font Awesome*/
+.fa-shield, .fa-home, .my-fa {
+  margin-right: 0.45em;
+}
+
+.fa-check {
+  opacity: .925;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*MEDIA QUERIES*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Arreglo para que funcione la sección de contacto en ancho de móvil*/
+@media only screen and (max-width: 1290px) {
+  #main-subcontainer_contact #side-text_right {
+    display: none;
+  }
+  #main-subcontainer_contact #wrapper {
+    margin: none;
+    margin-left: 0em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #side-text_right {
+    display: none;
+  }
+  #wrapper {
+    margin: none;
+    margin-left: .9em;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .payment-card {
+    width: 100%;
+  }
+  #main-subcontainer_contact .payment-card {
+    width: 27.5em !important;
+  }
+  .payment-card-container {
+    width: 100%;
+    padding: 5vw 3vw 7vw 3vw;
+  }
+  #main-subcontainer_contact .payment-card-container, #main-subcontainer_about .payment-card-container {
+    padding-bottom: 12vw;
+  }
+  .side-text {
+    text-align: center;
+    padding: 18vw 12vw 0 12vw;
+    width: 100%;
+    height: auto;
+  }
+  #side-text_right {
+    padding: 0;
+    padding-top: 10vw;
+  }
+  .side-text-title {
+    margin-top: 0;
+  }
+  #wrapper {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }  
+  #main-subcontainer_key #wrapper {
+    height: 100vh;
+  }
+  #main-subcontainer_key .side-text {
+    padding-top: 11vw;
+  }
+  .main-container {
+    font-size: calc(16 * 0.215vw) !important;
+  }
+  .touchable-background {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .main-subcontainer {
+    min-height: 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .main-container {
+    font-size: calc(16 * 0.0625vw);
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .main-container {
+    font-size: 20px;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Key.html*/
+
+#main-subcontainer_key {
+  transition: .1s;
+}
+
+.card-text {
+  font-size: .85em;
+  line-height: 1.3em;
+}
+
+#lower-text_key {
+  margin-bottom: 1.9em;
+}
+
+.payment-card-subcontainer b {
+  text-align: center;
+  width: 100%;
+  margin-top: .7em;
+  margin-bottom: .7em;
+  user-select: text;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.field-container_key {
+  margin-top: -.7em;
+}
+
+#key-input_1, #key-input_2 {
+  font-weight: bold;
+  font-size: 1em;
+  height: 3.2em;
+  padding-left: 3.6em;
+}
+
+#main-subcontainer_key .loading {
+  margin-top: 5em;
+}
+
+.confirmation-message_key {
+  position: absolute;
+  margin-top: -15.9em;
+  height: 65%;
+  width: 95%;
+  background-color: rgba(0,0,0,.05);
+  border-radius: .1em;
+  transform: scale(.8) translateX(-2.5em) translateY(.7em);
+}
+
+.confirmation-message_key-subcontainer {
+  transform: scale(0.65);
+}
+
+.confirmation-message_key .fa {
+  opacity: .3;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contact.html*/
+
+#main-subcontainer_contact {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.field-container textarea {
+  width: 100%;
+  margin-top: 1.3em;
+  margin-bottom: .2em;
+  resize: vertical;
+  min-height: 10em;
+  max-height: 50em;
+  border-color: rgba(0,0,0,.2);
+  padding: 10px;
+}
+
+#main-subcontainer_contact .field-container {
+  margin-top: -.8em;
+}
+
+#main-subcontainer_contact .payment-card {
+  width: 34em;
+}
+
+#main-subcontainer_contact .payment-card-subcontainer {
+  margin-top: .6em;
+  width: 80%;
+}
+
+#main-subcontainer_contact .submit {
+  width: auto;
+  padding-left: 3.2em;
+  padding-right: 3.2em;
+}
+
+.button-container {
+  width: 100%;
+  text-align: right;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*About.html*/
+
+#main-subcontainer_about {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;  
+}
+
+.construction-container {
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+  margin-top: -.5em;
+}
+
+.construction {
+  position: absolute;
+  background-image: url('../assets/images/construction2.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30em;
+  height: 22em;
+  margin-top: 1.2em;
+}
+
+#payment-card_about {
+  height: 22em;
+  overflow: hidden;
+}
+
+#payment-card_about .email-text {
+  margin-top: 10em;
+  font-size: 1.5em;
+  opacity: .5;
+}
+
+.patch {
+  position: absolute;
+  width: 30em;
+  height: 4.7em;
+  bottom: 0;
+  background-color: white;
+  opacity: 1;
+}

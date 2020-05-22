@@ -1,0 +1,252 @@
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+HTML de la sección Contacto
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!DOCTYPE html>
+<!-- Idioma: español -->
+<html lang="es-ES">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- Optimización para la visualización en móviles -->
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>
+
+	<title>Grade Manager - Calcula fácilmente las notas finales de tus alumnos</title>
+	<link rel='icon' href='assets/favicon.ico' type='image/x-icon'/ >
+
+	<!-- Hojas de estilo propias -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/cards.css">
+
+	<!-- Fuente Montserrat -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap">
+	<!-- Librería jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<!-- Validation.js -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>	
+	
+	<!-- Permite usar la función ".off().on("load",..." -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<!-- Modernizr detecta cuáles son las características del proyecto que soporta cada navegador -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+	<!-- Hojas de JavaScript propias -->
+	<script src="./js/cards.js"></script>
+	<script src="./js/js.js"></script>
+
+</head>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<body>
+
+	<!-- Header -->
+	<header>
+		
+		<!-- Contenedor del Header-->
+		<div class="wrapper">
+			
+			<!-- Sección de la izquierda: icono de la app -->
+			<div class="menu-left">
+				<span><a class="icon-logo" href="index.html"></a></span>
+				<!-- <img src="./assets/images/logo2.png"> -->
+			</div>
+
+			<!-- Sección de la derecha: opciones del menú -->
+			<div class="menu-right">
+				
+				<!-- Icono del menú desplegable para la versión móvil -->
+				<div id="nav-icon" class="noSelect">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+
+				<!-- Opciones del menú -->
+				<ul>
+					<!-- Interfaz Pro -->
+					<li><a href="pro.html">Pro</a></li>
+					<!-- Interfaz principal -->
+					<li><a href="index.html">Descarga</a></li>
+					<!-- Separador -->
+					<li class="separator"> | </li>
+					<!-- Selector del idioma -->
+					<li>	
+						<form action="" class="language-picker_form">
+
+							<!-- Flecha personalizada del selector -->
+							<label><i class="fa fa-angle-down"></i></label>
+
+					    	<select name="language-picker-select" id="language-picker-select">
+					     		<!-- <option></option> -->
+					     		<option lang="en" value="english">English</option>
+					     		<option lang="es" value="espanol"selected>Español</option>    		
+					    	</select>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+	<main>
+
+		<!-- Cargamos la imagen de fondo a resolución completa para saber cuándo estará lista -->
+		<img class="load" id="load_3" src="assets/images/background_2.jpg">
+		
+		<!-- Contenedor de la tarjeta en la que ingresamos el email para poder pagar -->
+		<div class="main-container">
+
+			<!-- Capa que se ubica encima de la imagen de fondo -->
+			<div class="touchable-background">
+
+				<div class="main-subcontainer" id="main-subcontainer_contact">
+
+					<!-- Envoltorio Flexbox -->
+					<div id="wrapper">
+						
+						<!-- Texto explicativo de la izquierda -->
+						<div class="side-text side-text_key">
+
+							<p class="side-text-title"><i class="fa fa-envelope my-fa"></i>Contáctanos</p>
+
+							<p class="side-text-body">¿Tienes alguna duda o sugerencia? </p>
+						</div>
+
+						<!-- Contenedor de las tarjetas -->
+						<div class="payment-card-container center">
+
+							<!-- Tarjeta -->
+							<div class="payment-card center">
+								
+								<!-- Botón de arriba a la derecha para cerrar -->
+								<!-- <div class="close-icon center noSelect"><p>+</p></div> -->
+								
+								<!-- Cuerpo de la tarjeta -->
+								<div class="payment-card-subcontainer">
+
+									<!-- Formulario -->									
+									<div class="change_password">	
+									
+										<form action="javascript:void(0)">
+
+											<!-- Contenedor del campo de texto -->
+											<div class="field-container field-container_contact" id="field-container_1">
+
+												<div class="placeholder" id="placeholder_key_1">
+													<p>Email</p>
+												</div>
+												<!-- Icono del campo de texto -->
+												<i class="fa fa-envelope field-icon" id="icon_key_1"></i>
+
+												<!-- Campo de texto -->
+												<input type="email" name="email" class="email-input" id="input_1">
+											</div>
+
+											<!-- Contenedor del campo de texto -->
+											<div class="field-container field-container_contact" id="field-container_2">
+
+												<div class="placeholder" id="placeholder_key_2">
+													<p>Tema</p>
+												</div>
+												<!-- Icono del campo de texto -->
+												<i class="fa fa-pencil field-icon" id="icon_key_2"></i>
+
+												<!-- Campo de texto -->
+												<input type="text" name="subject" class="email-input" id="input_2">
+											</div>
+
+											<div class="field-container" id="field-container_3">
+												<textarea rows="12" cols="50" name="body" id="input_3"></textarea>
+											</div>
+
+											<!-- Botón -->
+											<div class="button-container">
+												<!-- <input type="submit" class="submit button_key button-blue" type="button" value="ENVIAR CONSULTA"></input> -->
+												<button class="submit button_key button-blue" type="button">ENVIAR CONSULTA</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<!-- Icono de carga -->
+								<div class="loading-container center">
+									<div class="loading"></div>
+								</div>		
+								<div class="confirmation-message">
+									<div id="tick" class="fa fa-check"></div>
+									<p class="side-text-title email-text">Consulta enviada</p>
+									<!-- <p class="side-text-body sent-text">fdsakjlfds@gmail.com</p>-->
+								</div>						
+							</div>
+						</div>
+
+						<!-- Texto explicativo derecho -->
+						<div class="side-text" id="side-text_right">
+							<!-- <div id="tick" class="fa fa-check"></div>
+							<p class="side-text-title email-text">Revisa tu correo</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<!-- Footer -->
+			<footer>
+				
+				<!-- Envoltorio del footer -->
+				<div class="footer-wrapper">
+				
+					<!-- Contenedor superior -->
+					<div class="upper-footer">
+
+						<!-- Contenedor del logo de la app -->
+						<div class="footer-left-container">
+
+							<!-- Logo de la app -->
+							<div class="footer-logo icon-logo"></div>
+						</div>
+
+						<!-- Contenedor de la información referente a la empresa -->
+						<div class="footer-middle-container">
+							<ul>
+								<!-- Título de la lista -->
+								<li class="footer-title">Empresa</li>
+								<li><a href="about.html">Acerca de</a></li>
+								<li class="underline_footer"><a href="contact.html">Contacto</a></li>
+							</ul>
+						</div>
+						
+						<!-- Contenedor de la información referente a lo legal -->
+						<div class="footer-right-container">
+							<ul>
+								<li class="footer-title">Legal</li>
+								<li><a href="terms.html">Términos de uso</a></li>
+								<li><a href="privacy.html">Política de privacidad</a></li>
+								<li><a href="" class="disabled">Cookies</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Dirección de contacto -->
+					<div class="lower-footer">
+						<p>©2020 GradeSheet | gradesheetsoftware@gmail.com</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</main>
+</body>
+</html>

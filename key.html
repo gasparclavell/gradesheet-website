@@ -1,0 +1,163 @@
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+HTML de la tarjeta que muestra la clave de producto tras realizar el pago
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!DOCTYPE html>
+<!-- Idioma: español -->
+<html lang="es-ES">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- Optimización para la visualización en móviles -->
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>
+
+	<title>Grade Manager - Calcula fácilmente las notas finales de tus alumnos</title>
+	<link rel='icon' href='assets/favicon.ico' type='image/x-icon'/ >
+
+	<!-- Hojas de estilo propias -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/cards.css">
+
+	<!-- Fuente Montserrat -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap">
+	<!-- Librería jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<!-- Validation.js -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>	
+	
+	<!-- Permite usar la función ".off().on("load",..." -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<!-- Modernizr detecta cuáles son las características del proyecto que soporta cada navegador -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+	<!-- Hojas de JavaScript propias -->
+	<script src="./js/cards.js"></script>
+	<script src="./js/js.js"></script>
+
+</head>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<body>
+
+	<main>
+
+		<!-- Cargamos la imagen de fondo a resolución completa para saber cuándo estará lista -->
+		<img class="load" id="load_3" src="assets/images/background_2.jpg">
+		
+		<!-- Contenedor de la tarjeta en la que ingresamos el email para poder pagar -->
+		<div class="main-container">
+
+			<!-- Capa que se ubica encima de la imagen de fondo -->
+			<div class="touchable-background">
+
+				<div class="main-subcontainer" id="main-subcontainer_key">
+
+					<!-- Envoltorio Flexbox -->
+					<div id="wrapper">
+						
+						<!-- Texto explicativo de la izquierda -->
+						<div class="side-text side-text_key">
+
+							<!-- Título -->
+							<p class="side-text-title"><i class="fa fa-envelope my-fa"></i>Tienes un email</p>
+
+							<!-- Texto -->
+							<p class="side-text-body">En él hemos guardado una copia de tu clave de activación</p>
+						</div>
+
+						<!-- Contenedor de las tarjetas -->
+						<div class="payment-card-container center">
+
+							<!-- Tarjeta -->
+							<div class="payment-card center">
+								
+								<!-- Botón de arriba a la derecha para cerrar -->
+								<!-- <div class="close-icon center noSelect"><p>+</p></div> -->
+								
+								<!-- Cuerpo de la tarjeta -->
+								<div class="payment-card-subcontainer">
+									
+									<p class="card-text">Tu clave de activación es: </p>
+									<div class="center"><b>XXXX-XXXX-XXXX-XXXX</b></div>
+									<div class="lower-text-container">
+										<p class="card-text" id="lower-text_key">Puedes usarla como contraseña para acceder al almacenamiento en la nube o cambiar a otra ahora mismo:</p>
+									</div>									
+
+									<!-- Formulario -->									
+									<div class="change_password">	
+									
+										<form>
+
+										<!-- Contenedor del campo de texto -->
+										<div class="field-container field-container_key">
+
+											<div class="placeholder" id="placeholder_key_1">
+												<p>Nueva contraseña</p>
+											</div>
+											<!-- Icono del campo de texto -->
+											<i class="fa fa-key field-icon" id="icon_key_1"></i>
+
+											<!-- Campo de texto -->
+											<input type="password" name="key" class="email-input" id="key-input_1">
+										</div>
+
+										<!-- Contenedor del campo de texto -->
+										<div class="field-container field-container_key">
+
+											<div class="placeholder" id="placeholder_key_2">
+												<p>Confirmar contraseña</p>
+											</div>
+											<!-- Icono del campo de texto -->
+											<i class="fa fa-key field-icon" id="icon_key_2"></i>
+
+											<!-- Campo de texto -->
+											<input type="password" name="key_confirm" class="email-input" id="key-input_2">
+										</div>
+
+										<!-- Botón -->
+										<button class="submit button_key button-blue" type="button">CAMBIAR CONTRASEÑA</button>
+
+										</form>
+									</div>
+
+									<!-- Mensaje de confirmación -->
+									<div class="confirmation-message confirmation-message_key">
+
+										<div class="confirmation-message_key-subcontainer">										
+											<div id="tick" class="fa fa-cloud"></div>
+											<p class="side-text-title email-text">Contraseña reestablecida</p>
+											<!-- <p class="side-text-body sent-text">example@gmail.com</p>-->
+										</div>									
+									</div>
+								</div>
+
+								<!-- Icono de carga -->
+								<div class="loading-container center">
+									<div class="loading"></div>
+								</div>
+
+								
+							</div>
+						</div>
+
+						<!-- Texto explicativo derecho -->
+						<div class="side-text" id="side-text_right">
+							<!-- <div id="tick" class="fa fa-check"></div>
+							<p class="side-text-title email-text">Revisa tu correo</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,494 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOJA DE ESTILO DE LA PÁGINA DE LA VERSIÓN PRO */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Imagen de fondo*/
+#pro-background {
+  background-image: url('../assets/images/laptop_image_lighter_1024.jpg');
+  filter: brightness(40%); /*blur(4px)*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute; 
+  padding-bottom: 0%;
+  width: 100vw;
+  height: 1600px;
+  transition: .0s;
+  transition: .4s background-image;
+}
+
+/*Aquí modificamos la distancia del contenido desde el margen superior*/
+#pro-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 200;
+  opacity: 1;
+  top: 8px;
+  font-size: 16px;
+}
+
+/*Contenedor del eslogan y los botones de la versión Pro*/
+.introduction-container {
+  width: 62.5em;
+  margin: auto;
+  margin-top: 66px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+}
+
+/*Subcontenedor del eslogan y los botones de la versión Pro*/
+.introduction-subcontainer { 
+  width: 530px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/*Títulos*/
+.title-1 {
+  font-size: 2em;
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: normal;
+  font-weight: 300;
+}
+.title-2 {
+  margin-top: -0.305em;
+  font-size: 9.03em;
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: lighter;
+  margin-left: -0.083em;
+}
+.title-3 {
+  line-height: 1.5em;
+  margin-top: -6.56em;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: lighter;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor de la franja blanca inclinada*/
+#white-stripe-contaniner {
+  position: relative;
+  top: 3.74em;
+  margin-bottom: -17.5em;
+  width: 100vw;
+  height: 18.75em;
+  overflow: hidden;
+}
+
+/*Franja blanca inclinada*/
+#white-stripe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 75em;
+  width: 100%;
+  clip-path: polygon(0 77%, 100% 90%, 100% 100%, 0% 100%);
+  background-color: white;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor de las tarjetas*/
+#pro-cards-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 62.5em;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 45px;
+  opacity: 1.0;
+  z-index: 199;
+}
+
+/*Tarjetas*/
+.pro-card {
+  padding-top: 0.5em;
+  height: 15.25em;
+  display: inline-block;
+  vertical-align:top;
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 0.625em 0.375em rgba(0, 0, 0, 0.1);
+  width: 13.875em;
+  margin-bottom: 1.5em;
+  margin-right: 2%;
+}
+.pro-card:last-child {
+  margin-right: 0;
+}
+
+/*Icono de la funcionalidad descrita en la tarjeta*/
+.pro-card-icon {
+  margin-top: 1.5em;
+  display: inline-block;
+  width: 20%;
+  height: 3em;
+  background-size: 100%;
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  background-image: url('../assets/images/pro_icon.png');
+}
+  /*Icono de la primera tarjeta*/
+  #pro-card-icon_1 {
+    background-image: url('../assets/images/pro_icon_1.png');
+  }
+  /*Icono de la segunda tarjeta*/
+  #pro-card-icon_2 {
+    background-image: url('../assets/images/pro_icon_2.png');
+    transform: scale(1.02);
+  }
+  /*Icono de la tercera tarjeta*/
+  #pro-card-icon_3 {
+    background-image: url('../assets/images/pro_icon_3.png');
+    transform: scale(1.05);
+  }
+  /*Icono de la cuarta tarjeta*/
+  #pro-card-icon_4 {
+    background-image: url('../assets/images/pro_icon_4.png');
+    transform: scale(1.25);
+  }
+
+/*Contenedor del texto de la tarjeta*/
+.pro-card-text-wrapper {
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  margin-top: 1em;
+}
+
+/*Título del texto de la tarjeta*/
+.pro-card-title {
+  display: inline-block;
+  width: 70%;
+  font-weight: bold;
+  padding-right: 0.45em;
+  padding-left: 0.45em;
+  margin: 0;
+  padding-top: 0.45em;
+  background-color: transparent;
+  font-size: 0.91em;
+  font-weight: 500;
+}
+
+/*Texto de la tarjeta*/
+.pro-card-text {
+  display: inline-block;
+  width: 70%;
+  margin-top: 1.23em;
+  line-height: 1.38em;
+  font-size: 0.81em;
+  font-weight: 300;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Parte inferior de la interfaz Pro: "¿Dónde va el dinero?"*/
+#pro-white-bottom-container {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255,255,255);
+  margin-top: -90px;
+  z-index: -1;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Contenedor de la separación entre secciones*/
+.bottom-title-wrapper {
+  width: 100%;
+  position: relative;
+  font-weight: 300;
+}
+
+/*Subcontenedor de la separación entre secciones*/
+.bottom-title {
+  padding-top: 5em;
+  display: inline-block;
+  font-size: 1.66em;
+}
+
+/*Separador*/
+.separator_gold {
+  width: 5em;
+  border: 1px solid rgb(224, 154, 46);
+  margin-top: 2em;
+}
+
+/*Contenedor de a dónde va el dinero*/
+.support-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/*Subontenedor de a dónde va el dinero*/
+.support-subcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 70em;
+  padding-top: 3.33em;
+  padding-bottom: 11em;
+}
+
+/*Envoltorio de cada elemento*/
+.support-wrapper {
+  display: flex;
+  width: 46%;
+  height: 8.88em;
+  margin: 2%;  
+}
+
+/*Icono del elemento*/
+.support-icon {
+  width: 11.11em;
+  height: 11.11em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+  #support-icon_1 {
+    background-image: url('../assets/images/updates.png');
+  }
+  #support-icon_2 {
+    background-image: url('../assets/images/self_sufficient.png');
+  }
+  #support-icon_3 {
+    background-image: url('../assets/images/server.png');
+  }
+  #support-icon_4 {
+    background-image: url('../assets/images/team.png');
+  }
+
+/*Contenedor de la descripción*/
+.support-text-wrapper {
+  width: 80%;
+  height: 11.11em;
+  text-align: left;
+  font-size: 1em;
+  margin-left: 1.11em; 
+  padding-top: 0.83em; 
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+/*Título del elemento*/
+.support-title {
+  font-weight: 500;
+}
+
+/*Franja decorativa sobre sobre el footer*/
+.franja-amarilla {
+  width: 100%;
+  height: 0.55em;
+  background-image: linear-gradient(to right, #E7B84F, #E5823B);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*MEDIA QUERIES*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 1800px) {
+  #non-footer-container {
+    font-size: 18px !important;
+  }
+  .introduction-container {
+    margin-top: 74px !important;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .introduction-subcontainer { 
+    font-size: 17px !important;
+  }
+  #pro-white-bottom-container {
+    font-size: 16px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  #non-footer-container {
+    font-size: calc(16 * 0.0625vw);
+  }
+  .introduction-container {
+    margin-top: calc(66 * 0.0625vw);
+  }
+  .introduction-subcontainer { 
+    font-size: calc(16 * 0.0625vw);
+  }
+  #pro-white-bottom-container {
+    font-size: calc(15 * 0.0625vw);
+  }
+}
+@media only screen and (max-width: 1400px) {
+  #non-footer-container {
+    font-size: calc(16 * 0.0715vw);
+  }
+  #pro-white-bottom-container {
+    font-size: calc(15 * 0.0715vw);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #non-footer-container {
+    font-size: 13.75px;
+  }
+  #pro-white-bottom-container {
+    font-size: 12.9px;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (max-width: 980px) {
+  #pro-background {
+    height: 150vw;
+    background-attachment: inherit;
+  }
+  .introduction-container {
+    width: 100%;
+    margin-top: 6.7vw;
+    margin-bottom: 3.6vw;
+  }
+  .introduction-subcontainer {
+    width: 100%;
+    text-align: center;
+    padding: 0 15% 0 15%;
+    margin-bottom: 5vw;
+    margin-top: 4vw;
+  }
+  .title-1 {
+    font-size: 7vw;
+  }
+  .title-2 {
+    margin-top: -6.5vw;
+    font-size: 25vw;
+  }
+  .title-3 {
+    line-height: 4.5vw;
+    margin-top: -17vw;
+    font-size: 3vw;
+    margin-bottom: 10vw;
+  }
+  #white-stripe-contaniner {
+    top: 14vw;
+    margin-bottom: -17vw;
+    height: 20vw;
+  }
+  #white-stripe {
+    height: 60vw;
+    clip-path: polygon(0 70%, 100% 90%, 100% 100%, 0% 100%);
+  }
+  #non-footer-container {
+    font-size: calc(18 * 0.2vw);
+    width: 100%;
+  }
+  #pro-cards-container {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 4.7vw;
+    margin-bottom: -11px;
+    cursor: pointer;
+  }
+   #pro-cards-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent; /*Hacer el scroll transparente*/
+  } 
+
+  /*Al agarrar alguna de las tarjetas en versión móvil*/
+  #pro-cards-container.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+  .pro-card {
+    margin: 3vw;
+    box-shadow: 0 0 0.5em 0.3em rgba(0, 0, 0, 0.08);
+  }
+    .pro-card:nth-child(1) {
+      margin-left: 10vw;
+    }
+    .pro-card:nth-child(4) {
+      margin-right: 10vw;
+    }
+
+  .pro-card-text-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    white-space: initial;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  #pro-white-bottom-container {
+    padding-top: 41vw;
+    margin-top: -38vw;
+  }
+  #pro-white-bottom-container {
+    font-size: calc(42 * 0.0715vw);
+  }
+  .bottom-title {
+    width: 78%;
+    padding-top: 2.8vw;
+  }
+  .separator_gold {
+    margin-top: 0;
+  }
+  .support-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  .support-subcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 78%;
+    padding-bottom: 14.3vw; /*Margen inferior que separa el Footer*/
+    padding-top: 3.7em;
+  }
+  .support-wrapper {
+    display: flex;
+    width: 100%;
+    height: 26vw; /*Esto define la distancia entre los apartados de a dónde va el dinero*/
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1vw;
+    padding-left: 2vw;
+    font-size: 2.48vw;
+  }
+  .support-icon {
+    width: 25.5vw;
+    height: 25.5vw;
+  }
+  .support-text-wrapper {
+    width: 100%;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 4vw;
+  }
+  
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  .franja-amarilla {
+    height: 1.35vw;
+  }
+}

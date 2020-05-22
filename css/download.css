@@ -1,0 +1,437 @@
+@import "laptop.css";
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOJA DE ESTILO DE LA PÁGINA DE DESCARGA */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Fondo de la interfaz principal*/
+.download-background {
+  position: relative;
+  background-image: url('../assets/images/background_lighter_1024.jpg');
+  width: 100%;
+  padding-bottom: 70%;
+  background-color: rgb(46,49,53);
+  z-index: 50;
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 1600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor principal*/
+#index-container {
+  position: absolute;
+  top: 0; /*Separación entre el margen superior y el eslogan*/
+  width: 100%;
+  z-index: 100;
+}
+
+/*Contenedor del eslogan y los botones*/
+.top-container {
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 4.1em;
+  padding-top: 2.2em; /*Apaño para que no aumente tanto el padding en 4K*/
+  margin-top: 42px;
+}
+
+#title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*Eslogan*/
+#title {  
+  font-size: 3.38em;
+  color: white;
+  padding-top: .1em;
+  margin-bottom: 32px;
+  font-weight: 300;
+  width: 18em;
+}
+
+/*Subeslogan*/
+#standard-text {
+  font-size: 26px;
+  margin-top: -6.2px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  padding-right: 20%;
+  padding-left: 20%;
+  margin-bottom: 22px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Sección inferior blanca de la interfaz principal*/
+#white-bottom-container {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255,255,255);
+  margin-top: -4.7%; /*Distancia superpuesta del portátil sobre el fondo blanco*/
+  z-index: -1;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Detalle para separar el portátil de los siguientes elementos*/
+#dedicado-container {
+  text-align: center;
+  padding-top: 12%;
+  width: 100%;
+  font-weight: 300;
+}
+
+/*Línea de separación entre el portátil y el subtítulo*/
+#line {
+  background: url('../assets/images/line.png');
+  display: block;
+  margin:auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 200px;
+  padding-bottom: 50px;
+}
+
+/*Subtítulo de a quién va dirigida la aplicación*/
+#dedicado {
+  display: block;
+  margin:auto;
+  width: 200px;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor de los niveles de enseñanza a los que va dirigida la app*/
+#middle-container {
+  width: 100%;
+  text-align: center;
+}
+
+/*Sección media con los niveles de enseñanza*/
+#white_background {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255,255,255);
+  margin-top: -70px; /*Distancia superpuesta del portátil sobre el fondo blanco*/
+  z-index: -1;
+}
+
+/*Contenedor de los niveles de enseñanza a los que va dirigida la app*/
+#educational-level-container {
+  display: inline-block;
+  width: 100%;
+  /*background-color: red;*/
+  text-align: center;
+  padding-top: 95px;
+  padding-bottom: 40px;
+  font-size: 18px;
+}
+
+/*Subcontenedor de cada nivel de enseñanza*/
+.educational-level-subcontainer {
+  display: inline-block;
+  vertical-align:top;
+  /*background-color: red;*/
+  width: 6.875em;
+  margin: 3.1875em;
+}
+
+/*Círculo que contiene el icono del nivel de enseñanza*/
+.educational-level-circle {
+  background-color: rgba(0, 0, 0, 0.027);
+  border-radius: 1000px;
+  box-shadow: 0 0 0 1.375em rgba(0, 0, 0, 0.027);
+}
+
+/*Icono del nivel de enseñanza*/
+.nivel_ensenyanza {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: 100%;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+}
+  #nivel_ensenyanza_1 {
+    background-image: url('../assets/images/educacion_primaria.png');
+  }
+  #nivel_ensenyanza_2 {
+    background-image: url('../assets/images/secundaria_y_bachillerato.png');
+  }
+  #nivel_ensenyanza_3 {
+    background-image: url('../assets/images/formacion_profesional.png');
+  }
+  #nivel_ensenyanza_4 {
+    background-image: url('../assets/images/universidad.png');
+  }
+
+/*Nombre del nivel de enseñanza*/
+.text_nivel_ensenyanza {
+  width: 100%;
+  padding-right: 0.375em;
+  padding-left: 0.375em;
+  margin: 0;
+  padding-top: 2.8125em;
+  line-height: 150%;
+  font-size: 0.9375em;
+  font-weight: 300;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*TARJETAS FREE Y PRO*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Tarjetas con la comparativa de las versiones Free y Pro*/
+#card-comparison-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 17px; /*18.2857px -> 14px*/ /*17.1428px -> 15px*/
+  padding-top: 0.625em;
+  padding-bottom: 9em;
+}
+
+/*Triángulo decorativo inferior*/
+#triangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 42vw solid #EABB4F;
+  border-left: 42vw solid transparent;
+}
+
+/*Triángulo decorativo con gradiente*/
+/*#gradient-square {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  background-image: linear-gradient(to right, #E7B84F , #E5823B);
+}*/
+
+/*Tarjeta de Grade Manager Free*/
+.card {
+  position: relative;
+  display: inline-block;
+  vertical-align:top;
+  width: 29em;
+  background-color: white;
+  margin: 1.375em;
+  border-radius: 1em; /*1.125em*/
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.09); /*0 0 10px 6px rgba(0, 0, 0, 0.07)*/
+  padding-left: 2.375em;
+  padding-right: 2.375em;
+  padding-top: 0.47em;
+  margin-bottom: 2.375em;
+}
+
+/*Título de la tarjeta*/
+.card-title {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: left;
+}
+
+/*Contenedor de las características de la versión*/
+.card-central-container {
+  margin-top: 1.875em;
+  margin-left: 1.25em;
+}
+
+/*Contenedor de la característica*/
+.feature-container {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/*Círculo de color para indicar el nivel de la característica (Free/Pro)*/
+.feature-circle {
+  border-radius: 1.125em;
+  background-color: #80AE3E;
+  width: 1.06em;
+  height: 1.06em;
+  margin-bottom: 0.81em;
+}
+.feature-circle_orange {
+  background-color: #E0A330;
+}
+
+/*Texto de la característica*/
+.feature-text {
+  font-size: 0.875em; 
+  margin-left: 2.71em; 
+  margin-top: -2.142em;
+  font-weight: 300;
+}
+
+/*Bloque tras las características*/
+.bloque-blanco {
+  width: 100%;
+  height: 5.625em;
+}
+#mucho_mas {
+  font-size: 1.1875em;
+  padding-top: 1.315em;
+  font-weight: 300;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*MEDIA QUERIES*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 2048px) {
+  .download-background {
+    padding-bottom: 30%;
+  }
+  #triangle {
+    border-bottom: 625px solid #EABB4F;
+    border-left: 625px solid transparent;
+  }
+}
+
+@media only screen and (min-width: 1922px) {
+  .top-container {
+    font-size: 19.2px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  #card-comparison-container {
+    font-size: 19px !important;
+  }
+}
+
+/*Límite del redimensionado del portátil*/
+@media only screen and (min-width: 1740px) {
+  #white-bottom-container {
+    margin-top: -80px;
+  }
+  #dedicado-container {
+    padding-top: 206px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .top-container {
+    font-size: calc(16 * 0.0625vw);
+  }
+  #card-comparison-container {
+    font-size: calc(17 * 0.0625vw);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .educational-level-subcontainer {
+    font-size: calc(15 * 0.0858vw);
+    
+  }
+  #educational-level-container {
+    padding-top: 6.8vw;
+  }
+  #card-comparison-container {
+    font-size: calc(14 * 0.0865vw);
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (max-width: 1200px) {
+  #title {  
+    width: 16em;
+  }
+  #white-bottom-container {
+    margin-top: -55.6px;
+  }
+  .educational-level-subcontainer {
+    font-size: 15.4px;
+  }
+  #card-comparison-container {
+    font-size: 14.55px;
+  }
+}
+
+@media only screen and (max-width: 980px) { /*max-device-width*/
+  .download-background {
+    background-attachment: inherit;
+    height: 200vw;
+  }
+  .top-container {
+    padding-top: 13vw;
+    padding-bottom: 5.9vw;
+    margin-top: 0;
+  }
+  #title {
+    font-size: 7vw;
+    line-height: 1.3em;
+    width: 11em;
+    margin-bottom: 0.67em;
+  }
+  #standard-text {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 4.8vw;
+    line-height: 1.5em;
+    padding-right: 17%;
+    padding-left: 17%;
+    margin-bottom: .67em;
+  }
+  #fa1 {
+    margin-right: 1.8vw !important;
+  }
+
+  #white-bottom-container {
+    margin-top: -4.7%;
+  }
+
+  #dedicado-container {
+    font-size: calc(20 * 0.13vw);
+    padding-top: 5.62em;
+    /*min-width: 380px;*/
+  }
+  #line {
+    width: 12.5em;
+    padding-bottom: 3.1em;
+  }
+  #dedicado {
+    width: 14.28em;
+    font-size: 0.875em;
+    line-height: 150%;
+  }
+
+  #educational-level-container {
+    font-size: calc(16 * 0.114vw);
+    padding-top: 8em;
+    padding-bottom: 4em;
+  }
+  .educational-level-subcontainer {
+    font-size: calc(20 * 0.13vw);
+    margin: 5vw 10vw 5vw 10vw;
+  }
+  #triangle {
+    border-bottom: 80vw solid #EABB4F;
+    border-left: 70vw solid transparent;
+  }
+  #card-comparison-container {
+    font-size: calc(23 * 0.12vw);
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5em;
+  }
+}

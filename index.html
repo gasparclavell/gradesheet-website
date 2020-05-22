@@ -1,0 +1,401 @@
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+HTML de la sección principal (Descarga)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!DOCTYPE html>
+<!-- Idioma: español -->
+<html lang="es-ES">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- Optimización para la visualización en móviles -->
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>
+
+	<title>GradeSheet - Calcula fácilmente las notas finales de tus alumnos</title>
+	<link rel='icon' href='assets/favicon.ico' type='image/x-icon'/ >
+
+	<!-- Hojas de estilo propias -->
+	<link rel="stylesheet" href="./css/download.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<!-- Fuente Montserrat -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap">
+	<!-- Librería jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	
+	<!-- Permite usar la función ".off().on("load",..." -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Modernizr detecta cuáles son las características del proyecto que soporta cada navegador -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+	<!-- Hoja de JavaScript propia -->
+	<script src="./js/js.js"></script>
+
+</head>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<body>
+
+	<!-- Header -->
+	<header>
+		
+		<!-- Contenedor del Header-->
+		<div class="wrapper">
+			
+			<!-- Sección de la izquierda: icono de la app -->
+			<div class="menu-left">
+				<span><a class="icon-logo" href="index.html"></a></span>
+				<!-- <img src="./assets/images/logo2.png"> -->
+			</div>
+
+			<!-- Sección de la derecha: opciones del menú -->
+			<div class="menu-right">
+				
+				<!-- Icono del menú desplegable para la versión móvil -->
+				<div id="nav-icon" class="noSelect">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+
+				<!-- Opciones del menú -->
+				<ul>
+					<!-- Interfaz Pro -->
+					<li><a href="pro.html">Pro</a></li>
+					<!-- Interfaz principal -->
+					<li class="underline"><a href="index.html">Descarga</a></li>
+					<!-- Separador -->
+					<li class="separator"> | </li>
+					<!-- Selector del idioma -->
+					<li>	
+						<form action="" class="language-picker_form">
+
+							<!-- Flecha personalizada del selector -->
+							<label><i class="fa fa-angle-down"></i></label>
+
+					    	<select name="language-picker-select" id="language-picker-select">
+					     		<!-- <option></option> -->
+					     		<option lang="en" value="english">English</option>
+					     		<option lang="es" value="espanol"selected>Español</option>    		
+					    	</select>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+	<main>
+		
+		<!-- Cargamos la imagen de fondo a resolución completa para saber cuándo estará lista -->
+		<img class="load" id="load_1" src="assets/images/background_lighter_1024.jpg">
+		<!-- Si se deja esta línea de código, se carga primero la imagen de la app a baja resolución y, cuando esté lista la de alta resolución, se pone encima, sin parpadeos -->
+		<img class="load" id="load_2" src="assets/images/app_2_2048.jpg">
+
+		<!-- Imagen de fondo -->
+		<div class="download-background"></div>
+
+		<!-- Contenedor principal -->
+		<div id="index-container">
+
+			<!-- Contenedor del eslogan y los botones -->
+			<div class="top-container">
+				
+				<div class="top-text-wrapper">
+					<!-- Contenedor del eslogan -->
+					<div id="title-container">
+						<h1 id="title">Calcula fácilmente las notas finales de tus alumnos</h1>
+					</div>
+					
+					<!-- Subeslogan -->
+					<p id="standard-text">Olvídate de las fórmulas y de la calculadora</p>
+				</div>
+				
+				<!-- Centramos los botones -->
+				<div class="center">
+
+					<!-- Contenedor de los botones -->
+					<div id="buttons-container">
+
+						<!-- Botón de descarga -->
+						<a href="./assets/sources/GradeSheet_alpha_v1.0.5.exe" class="button button_free">
+							<span><i class="fa fa-download" id="fa1"></i>Descargar</span>
+						</a>
+						<!-- Botón a la versión Pro -->
+						<a href="pro.html" class="button button_pro"><span>Pásate a Pro</span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+			
+			<!-- Contenedor del portátil -->
+			<div id="laptop">
+				
+				<!-- Borde exterior del portátil -->
+				<div id="laptop-outer-border">
+
+					<!-- Borde exterior del portátil -->
+					<div id="laptop-inner-border">
+							
+						<!-- Contenedor de la cámara -->
+						<div class="center">
+							<div id="camera"></div>
+						</div>
+						
+						<!-- Borde más grueso del portátil -->
+						<div id="laptop-border">
+							
+							<!-- Fondo de la app temporal mientras se carga la imagen final -->
+							<div id="app_pre">
+								<!-- Parte de la izquierda -->
+								<div id="app_left"></div>
+								<!-- Franja oscura entre secciones -->
+								<div id="app_right"></div>
+							</div>
+							
+							<!-- Cargamos la imagen final para saber cuándo estará lista -->
+							<img class="load" id="load_2" src="assets/images/app_2.jpg">
+
+							<!-- Imagen de la app -->
+							<div id="app"></div>
+						</div>
+					</div>	
+				</div>
+				
+				<!-- Parte inferior del portátil, sección de arriba -->
+				<div class="screen_bottom">
+					
+					<!-- Detalle central del cuerpo del portátil -->
+					<div id="box"></div>											
+				</div>
+				
+				<!-- Parte inferior del portátil, sección de abajo -->
+				<div class="screen_bottom_2"></div>				
+			</div>
+
+			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+			
+			<!-- Sección inferior blanca de la interfaz principal -->
+			<div id="white-bottom-container">
+
+				<!-- Detalle para separar el portátil de los siguientes elementos -->
+				<div id="dedicado-container">
+
+					<!-- Línea de separación entre el portátil y el subtítulo -->
+					<div id="line"></div>
+
+					<!-- Subtítulo de a quién va dirigida la aplicación -->
+					<p id="dedicado">Dedicado a los profesionales de la educación reglada</p>
+				</div>
+				
+				<!-- Sección media con los niveles de enseñanza -->
+				<div id="middle-container">
+					
+					<!-- Contenedor de los niveles de enseñanza a los que va dirigida la app -->
+					<div id="educational-level-container">
+						
+						<!-- Educación primaria -->
+						<div class="educational-level-subcontainer">
+
+							<!-- Círculo que contiene el icono del nivel de enseñanza -->
+							<div class="educational-level-circle">
+
+								<!-- Icono del nivel de enseñanza -->
+								<div class="nivel_ensenyanza" id="nivel_ensenyanza_1"></div>
+							</div>
+
+							<!-- Nombre del nivel de enseñanza -->
+							<p class="text_nivel_ensenyanza">Educación Primaria</p>
+						</div>
+						
+						<!-- Secundaria y bachillerato -->
+						<div class="educational-level-subcontainer">
+							<div class="educational-level-circle">
+								<div class="nivel_ensenyanza" id="nivel_ensenyanza_2"></div>
+							</div>							
+							<p class="text_nivel_ensenyanza">Secundaria y Bachillerato</p>
+						</div>
+
+						<!-- Formación profesional -->
+						<div class="educational-level-subcontainer">
+							<div class="educational-level-circle">
+								<div class="nivel_ensenyanza" id="nivel_ensenyanza_3"></div>
+							</div>							
+							<p class="text_nivel_ensenyanza">Formación Profesional</p>
+						</div>
+						
+						<!-- Universidad -->
+						<div class="educational-level-subcontainer">
+							<div class="educational-level-circle">
+								<div class="nivel_ensenyanza" id="nivel_ensenyanza_4"></div>
+							</div>							
+							<p class="text_nivel_ensenyanza">Universidad</p>
+						</div>						
+					</div>
+				</div>
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+				
+				<!-- Tarjetas con la comparativa de las versiones Free y Pro -->
+				<div id="card-comparison-container">
+					
+					<!-- Triángulo decorativo inferior -->
+					<div id="triangle"></div>
+					<div id="gradient-square"></div>
+					
+					<!-- Tarjeta de Grade Manager Free -->
+					<div class="card">
+						
+						<!-- Título de la tarjeta -->
+						<p class="card-title">GradeSheet Free</p>
+
+						<!-- Línea de separación -->
+						<hr>
+
+						<!-- Contenedor de las características de la versión -->
+						<div class="card-central-container">
+							
+							<!-- Contenedor de la característica -->
+							<div class="feature-container">
+
+								<!-- Círculo de color para indicar el nivel de la característica (Free/Pro) -->
+								<div class="feature-circle"></div>
+
+								<!-- Texto de la característica -->
+								<p class="feature-text">Total modificación de los porcentajes y bases</p>
+							</div>							
+							
+							<div class="feature-container">
+								<div class="feature-circle feature-circle_orange"></div>
+								<p class="feature-text">Una evaluación por hoja</p>
+							</div>
+
+							<div class="feature-container">
+								<div class="feature-circle feature-circle_orange"></div>
+								<p class="feature-text">Hasta 25 alumnos por hoja</p>
+							</div>
+
+							<div class="feature-container">
+								<div class="feature-circle feature-circle_orange"></div>
+								<p class="feature-text">Hasta 5 criterios por hoja</p>
+							</div>
+						</div>
+						
+						<!-- Bloque tras las características -->
+						<div class="bloque-blanco">
+							<p id="mucho_mas"></p>
+						</div>
+						
+						<!-- Línea de separación -->
+						<hr>
+
+						<!-- Contenedor de los botones inferiores -->
+						<div class="bottom-button-container">
+
+							<!-- Botón inferior -->
+							<a href="./assets/sources/Grade Manager alpha v1.0.4.jar" class="bottom-button bottom-button_1"><span><i class="fa fa-download" id="fa2"></i> Pruébalo ahora</span></a>
+						</div>						
+					</div>
+					
+					<!-- Tarjeta de Grade Manager Pro -->
+					<div class="card">
+						
+						<p class="card-title">GradeSheet Pro</p>
+						<hr>
+						<div class="card-central-container">
+
+							<div class="feature-container">
+								<div class="feature-circle"></div>
+								<p class="feature-text">Total modificación de los porcentajes y bases</p>
+							</div>
+
+							<div class="feature-container">
+								<div class="feature-circle"></div>
+								<p class="feature-text">Hasta 5 evaluaciones por hoja</p>
+							</div>
+
+							<div class="feature-container">
+								<div class="feature-circle"></div>
+								<p class="feature-text">Hasta 100 alumnos por hoja</p>
+							</div>
+
+							<div class="feature-container">
+								<div class="feature-circle"></div>
+								<p class="feature-text">Hasta 16 criterios por hoja</p>
+							</div>
+						</div>
+
+						<div class="bloque-blanco">
+							<p id="mucho_mas">¡Y mucho más!</p>
+						</div>
+						
+						<hr>
+						<div class="bottom-button-container">
+							<a href="pro.html" class="bottom-button bottom-button_gold"><span>Descubre todas sus ventajas</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<!-- Footer -->
+			<footer>
+				
+				<!-- Envoltorio del footer -->
+				<div class="footer-wrapper">
+				
+					<!-- Contenedor superior -->
+					<div class="upper-footer">
+
+						<!-- Contenedor del logo de la app -->
+						<div class="footer-left-container">
+
+							<!-- Logo de la app -->
+							<div class="footer-logo icon-logo"></div>
+						</div>
+
+						<!-- Contenedor de la información referente a la empresa -->
+						<div class="footer-middle-container">
+							<ul>
+								<!-- Título de la lista -->
+								<li class="footer-title">Empresa</li>
+								<li><a href="about.html">Acerca de</a></li>
+								<li><a href="contact.html">Contacto</a></li>
+							</ul>
+						</div>
+						
+						<!-- Contenedor de la información referente a lo legal -->
+						<div class="footer-right-container">
+							<ul>
+								<li class="footer-title">Legal</li>
+								<li><a href="terms.html">Términos de uso</a></li>
+								<li><a href="privacy.html">Política de privacidad</a></li>
+								<li><a href="" class="disabled">Cookies</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Dirección de contacto -->
+					<div class="lower-footer">
+						<p>©2020 GradeSheet | gradesheetsoftware@gmail.com</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</main>
+</body>
+</html>

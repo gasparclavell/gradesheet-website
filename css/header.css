@@ -1,0 +1,428 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOJA DE ESTILO DEL HEADER */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Header*/
+header {
+  vertical-align: middle;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  transition: 0.3s;
+  padding-top: 4px;
+  padding-bottom: 1.5px;
+  box-shadow: none;
+  top: -1px;
+  max-height: 53px;
+}
+
+/*Header wrapper*/
+header .wrapper {
+  max-width: 65vw;
+  text-align: center;
+  margin: auto;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Clase que se añade al header cuando se hace scroll hacia abajo*/
+.header-fixed {
+  background: rgba(255,255,255,1.0);
+  box-shadow: 0 7px 10px -5px rgba(0,0,0,.27);
+  position: fixed;
+}
+.header-fixed #nav-icon span {
+  background: rgba(0,0,0,.9);
+}
+.header-fixed .menu-left a {
+  color: rgba(0,0,0,.9);
+}
+.header-fixed .menu-right li a {
+  color: rgba(0,0,0,.9);
+}
+.header-fixed .separator {
+  color: rgba(0,0,0,0.3);
+}
+.header-fixed .menu-right li a:after {
+  background-color: rgba(0,0,0,.9);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Icono del menú desplegable*/
+header #nav-icon {
+  position: relative;
+  display: none;
+  width: 33px;
+  height: 30px;
+  margin-top: 13.5px;
+  -webkit-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+/*Las barras que crean el icono del menú*/
+header #nav-icon span {
+  display: block;
+  position: absolute;
+  height: 16%;
+  width: 100%;
+  background: white;
+  border-radius: 100px;
+  opacity: 1;
+  left: 0;
+  -webkit-transition: .25s ease-in-out;
+  -ms-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+/*Barra 1*/
+header #nav-icon span:nth-child(1) {top: 0;}
+/*Barra 2 y 3*/
+header #nav-icon span:nth-child(2), header #nav-icon span:nth-child(3) {top: 39%;}
+/*Barra 4*/
+header #nav-icon span:nth-child(4) {top: 77%;}
+
+/*Cambio de posición de las barras al abrir el menú desplegable*/
+header.open #nav-icon span:nth-child(1) {
+  margin-top: 45%;
+  width: 0%;
+  left: 50%;
+}
+header.open #nav-icon span:nth-child(2) {
+  margin-top: 1%;
+  -webkit-transform: rotate(45deg);
+  -ms-transition: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+header.open #nav-icon span:nth-child(3) {
+  margin-top: 1%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transition: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header.open #nav-icon span:nth-child(4) {
+  margin-top: -38%;
+  width: 0%;
+  left: 50%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Contenedor del icono de la aplicación*/
+header .menu-left {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+/*Icono de la aplicación*/
+header .menu-left span a {
+  cursor: pointer;
+  transition: .2s;
+  color: white;
+  text-decoration: none;
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+header .icon-logo:before {
+  font-size: 25px;
+  line-height: 2.11 !important;
+}
+
+.header-fixed .icon-logo:before {
+  color: rgba(0,0,0,.85);
+}
+
+/*Contenedor del menú desplegable y de las opciones del Header*/
+header .menu-right {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  margin-top: -4px;
+}
+/*Contenedor de las opciones del Header*/
+header .menu-right ul {
+  list-style: none;
+  display: flex;
+}
+
+/*Opciones del Header*/
+header .menu-right li a {
+  text-decoration: none;
+  color: rgba(255,255,255,1);
+  position: relative;
+  font-weight: 300;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Subrayado de las opciones del menú al pasar el mouse por encima*/
+header .menu-right li a:after {
+  content: '';
+  position: absolute;
+  bottom: -.55em;
+  left: .06em;
+  height: 0.09em;
+  width: 0;
+  background-color: rgba(255,255,255,0.8);
+  transition: 0.2s;
+}
+.header-fixed .menu-right li a:after {
+  bottom: -.22em;
+  height: 0.06em;
+  background-color: rgba(0,0,0,0.6);
+}
+
+header .menu-right li a:hover:after {
+  width: 100%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Subrayado de las opciones del menú al seleccionarlas*/
+
+header .menu-right li a:after {
+  content: '';
+  position: absolute;
+  bottom: -.40em;
+  left: .06em;
+  height: 0.1em;
+  width: 0;
+  background-color: rgba(255,255,255,0.8);
+  transition: 0.2s;
+}
+
+header .menu-right li a:hover:after {
+  width: 100%;
+}
+
+header .menu-right .underline a:after {
+  width: 100%;
+  transition: 0s;
+}
+
+.header-fixed .menu-right li a:hover:after {
+  width: 0;
+}
+
+.header-fixed .menu-right .underline a:after {
+  width: 0;
+}
+
+/*Grosor extra para la opción seleccionada o con hover cuando el menú es fixed*/
+.header-fixed .menu-right .underline a, .header-fixed .menu-right li a:hover {
+  font-weight: 500;
+  letter-spacing: -.2px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*Selector del idioma*/
+header select {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  color: rgba(255,255,255,1);
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px; 
+  padding-right: 22px; /*Distancia clicable que cubre hasta la flecha personalizada del menú*/
+  font-weight: 300;
+}
+
+.language-picker_form {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/*Contenedor de la flecha personalizada del selector*/
+header label {
+  position: absolute;
+  margin-left: 5.7em;
+  pointer-events: none;
+  color: white;
+}
+.header-fixed label {
+  color: rgba(0,0,0,.9);
+}
+
+/*Opciones del selector*/
+header option {
+  font-size: 14px;
+  color: rgba(0,0,0,.9);
+  padding: 2px;
+}
+
+/*Cuando esté fijo el Header*/
+.header-fixed select {
+  color: rgba(0,0,0,.9);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*MEDIA QUERIES*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (min-width: 2048px) {
+  header .wrapper {
+    max-width: 1480px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header .wrapper {
+    max-width: 90%;
+  }
+  header .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*Formato del Header al cambiar a la versión móvil*/
+@media (max-width: 980px) {
+  /*Hacemos que no se subrayen las opciones elegidas del menú*/
+  header .menu-right .underline a:after, header .menu-right .underline a, header .menu-right li a:hover:after {
+    width: 0;
+  }
+  header .menu-right .underline a, header .menu-right li a:hover {
+    font-weight: 500;
+  }
+
+  header .menu-right li a:after {
+    bottom: -.3em;
+    height: 0.08em;
+  }
+  header {
+    padding-top: 3vw;
+    padding-bottom: 3.8vw;
+    max-height: 14vw;
+  }
+  header label {
+    color: rgba(0,0,0,.9);
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-left: 15vw;
+    padding-top: 1.3vw;
+  }
+  header .menu-left {
+    font-size: 5vw;
+  }
+  header .icon-logo:before {
+    font-size: 6vw;
+    line-height: 1.6 !important;
+  }
+  header #nav-icon {
+    display: block;
+    margin-top: 0.9vw;
+    width: 6.7vw;
+    height: 6.12vw;
+  }
+  header .menu-right {
+    margin-top: 0;
+  }
+  header .menu-right ul {
+    position: absolute;
+    margin-top: 3.75vw;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    text-align: left;
+    line-height: 6vw;
+    padding: 0;
+    background: rgba(245,245,245,.98);
+    z-index: -1;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .separator {
+    display: none;
+  }
+  header.open select {
+    color: rgba(0,0,0,.9);
+    margin-top: .8vw;    
+  }
+  /*Menú desplegado (.open)*/
+  header.open .menu-right ul { 
+    transition: .3s;
+    height: 44vw;
+    padding-top: 4vw;
+    box-shadow: 0 7px 10px -5px rgba(0,0,0,.27);
+  }
+  header.open {
+    background-color: white;
+  }
+  .header-fixed .menu-right ul {
+    transition: .3s;
+  }
+  header .menu-right li a {
+    color: rgba(0,0,0,.9);
+    font-size: 3.4vw; /*Tamaño de las opciones del menú*/
+  }
+  header label .fa {
+    font-size: 3.4vw !important; /*Tamaño de el la flecha personalizada del selector*/
+  }
+  header select {
+    font-size: 3.4vw !important;
+    padding-right: 4.2vw; /*Distancia clicable que cubre hasta la flecha personalizada del menú*/
+  }
+  /*Líneas de separación entre las opciones del menú*/
+  header .menu-right li {
+    border-bottom: .2vw solid rgba(0,0,0,0.05);
+    padding: 2.5vw 0 3.55vw 0; /*Separación entre la opción y su efecto de subrayado*/
+    height: 11.5vw;
+  }
+  header .menu-right li:nth-child(1) {
+    display: flex;
+  }
+  header .menu-right li:nth-child(2) {
+    display: flex;
+  }
+  header .menu-right li:nth-child(4) {
+    border-bottom: .5px solid rgba(0,0,0,0);
+    display: flex;
+  }
+
+  /*Pasamos a negro los iconos del menú al abrirlo*/
+  header.open .menu-left span a {
+    color: rgba(0,0,0,0.9);
+  }
+  header.open #nav-icon span {
+    background: rgba(0,0,0,0.9);
+  }
+  /*La línea de subrayado pasa a ser negra*/
+  header.open .menu-right li a:after {
+    background-color: rgba(0,0,0,0.8);
+  }
+  header select {
+    margin-left: 0; 
+  }
+}
